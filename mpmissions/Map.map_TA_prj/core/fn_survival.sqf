@@ -6,4 +6,5 @@
 │   Veuillez ne pas modifier ou supprimer ce bloc de commentaires   │
 └──────────────────────────────────────────────────────────────────*/
 
+
 [] call m700_fnc_spawnmenu;
