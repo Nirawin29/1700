@@ -6,10 +6,8 @@
 │   Veuillez ne pas modifier ou supprimer ce bloc de commentaires   │
 └──────────────────────────────────────────────────────────────────*/
 
-private _nearVehicle = getPosATL player nearEntities [["ship","car"], 50]; // vehicle in 50m
+private _nearVehicle = getPosATL player nearEntities [["ship","car"], 50];
 private _pid = getPlayerUid player;
-
-//CC YANIS
 
 if (!(_nearVehicle isEqualTo [])) then {
 	_Vehicle = _nearVehicle # 0;
