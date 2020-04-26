@@ -6,7 +6,7 @@
 │   Veuillez ne pas modifier ou supprimer ce bloc de commentaires   │
 └──────────────────────────────────────────────────────────────────*/
 
-private _nearVehicle = getPosATL player nearEntities [["ship","car"], 50];
+private _nearVehicle = getPosATL player nearEntities [["ship","car"], 50]; // vehicle in 50m
 private _pid = getPlayerUid player;
 
 if (!(_nearVehicle isEqualTo [])) then {
