@@ -9,6 +9,8 @@
 private _nearVehicle = getPosATL player nearEntities [["ship","car"], 50];
 private _pid = getPlayerUid player;
 
+//CC YANIS
+
 if (!(_nearVehicle isEqualTo [])) then {
 	_Vehicle = _nearVehicle # 0;
 	_VehInfo = _Vehicle getVariable ["vehicle_info",[]];
