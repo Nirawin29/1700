@@ -6,5 +6,4 @@
 │   Veuillez ne pas modifier ou supprimer ce bloc de commentaires   │
 └──────────────────────────────────────────────────────────────────*/
 
-diag_log "INITSERVER";
 [] call compile preprocessFileLineNumbers "\1700_server\init.sqf";
