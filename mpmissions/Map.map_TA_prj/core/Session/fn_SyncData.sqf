@@ -13,7 +13,7 @@ _this spawn {
 		["_showHint",true,[true]]
 	];
 
-	if !(missionNamespace getVariable ["AntiFloodSync",false]) then {
+	if (!(missionNamespace getVariable ["AntiFloodSync",false]) || {_force isEqualTo true}) then {
 		AntiFloodSync = true;
 		_ConfigLicensesList = "true" configClasses (missionconfigfile >> "m700_Settings" >> "Licenses");
 		
