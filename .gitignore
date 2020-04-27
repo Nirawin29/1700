@@ -1,4 +1,5 @@
 /@1700
+/@infiSTAR_A3
 /addons
 /appcache
 /argo
@@ -23,7 +24,7 @@
 /*.dll
 /@extDB3/logs
 /userconfig
-/*.log
+*.log
 armalog.cfg
 openssl_license.txt
 reboot.ps1
