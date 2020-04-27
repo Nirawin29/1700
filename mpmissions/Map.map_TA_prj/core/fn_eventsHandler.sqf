@@ -18,7 +18,7 @@
 		};  
 
 		if (_key == 1) then {
-			[] call m700_fnc_SyncData;
+			[true,false] call m700_fnc_SyncData;
 		};
 	}];
 };

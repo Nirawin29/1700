@@ -9,6 +9,7 @@
 
 _this spawn {
 	params [
+		["_force",false,[false]],
 		["_showHint",true,[true]]
 	];
 
@@ -33,8 +34,9 @@ _this spawn {
 		};
 		
 		_time = time;
-
-		waitUntil {time > (_time+((getNumber(missionConfigFile >> "m700_settings" >> "AntiFloodSyncData"))*60))};
+		if !(_force) then {
+			waitUntil {time > (_time+((getNumber(missionConfigFile >> "m700_settings" >> "AntiFloodSyncData"))*60))};
+		};
 		AntiFloodSync = false;
 	};
 };
