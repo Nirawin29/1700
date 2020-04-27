@@ -1,0 +1,147 @@
+/*%FSM<COMPILE "F:\Jeux\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, DeleteDeadVehicle">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"init",0,250,-58.987061,-355.756500,31.012939,-305.756470,0.000000,"init"};
+item1[] = {"true_",8,218,-59.085815,-268.745728,30.914185,-218.745621,0.000000,"true" \n ""};
+item2[] = {"While",2,250,-59.926514,-190.394196,30.073502,-140.394196,0.000000,"While"};
+item3[] = {"sleep",4,218,-137.069214,-93.987823,-47.069244,-43.987823,0.000000,"sleep"};
+item4[] = {"Statement",2,4346,-65.563980,5.973480,24.436035,55.973480,0.000000,"Statement"};
+item5[] = {"Check_var",4,218,21.716217,-92.108643,111.716217,-42.108643,0.000000,"Check var"};
+item6[] = {"Check_stop",4,218,-66.602295,96.742493,23.397705,146.742493,0.000000,"Check stop"};
+item7[] = {"End",1,250,-67.541870,191.637939,22.458160,241.637924,0.000000,"End"};
+link0[] = {0,1};
+link1[] = {1,2};
+link2[] = {2,3};
+link3[] = {3,4};
+link4[] = {4,5};
+link5[] = {4,6};
+link6[] = {5,2};
+link7[] = {6,7};
+globals[] = {0.000000,0,0,0,0,640,480,1,11,6316128,1,-463.786591,390.712738,355.132629,-414.874969,981,884,1};
+window[] = {2,-1,-1,-1,-1,1117,156,1686,156,3,999};
+*//*%FSM</HEAD>*/
+class FSM
+{
+        fsmName = "DeleteDeadVehicle";
+        class States
+        {
+                /*%FSM<STATE "init">*/
+                class init
+                {
+                        name = "init";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"private _time = time;" \n
+                         "DeleteDeadVehicle setFSMvariable [""stop"",false];" \n
+                         "" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true_">*/
+                                class true_
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="While";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "While">*/
+                class While
+                {
+                        name = "While";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "sleep">*/
+                                class sleep
+                                {
+                                        itemno = 3;
+                                        priority = 0.000000;
+                                        to="Statement";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"((time - _time) > (3 * 60))" \n
+                                         ""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Statement">*/
+                class Statement
+                {
+                        name = "Statement";
+                        itemno = 4;
+                        init = /*%FSM<STATEINIT""">*/"{	" \n
+                         "	private _vehicle = _x; " \n
+                         "	if (!alive _vehicle) then {" \n
+                         "		_type  = [""car"",""ship"",""tank"",""air""] findIf {_vehicle isKindOf _x};" \n
+                         "		if (_type > -1) then {" \n
+                         "			_VehInfo = _x getVariable [""vehicle_info"",[]];" \n
+                         "			if (!(_VehInfo isEqualTo [])) then {" \n
+                         "				_Vid = _VehInfo # 0;" \n
+                         "				_Pid = _VehInfo # 1;" \n
+                         "				_query = format[""UpdateAliveVehicle:%1:%2:%3"",0,_Vid,_Pid];" \n
+                         "				[_query,1] call DB_HC_fnc_asyncCall;" \n
+                         "			};" \n
+                         "			deleteVehicle _vehicle;" \n
+                         "		};" \n
+                         "	};" \n
+                         "} forEach vehicles;" \n
+                         "_time = time;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Check_stop">*/
+                                class Check_stop
+                                {
+                                        itemno = 6;
+                                        priority = 0.000000;
+                                        to="End";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"DeleteDeadVehicle getFSMvariable [""stop"",false]"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                                /*%FSM<LINK "Check_var">*/
+                                class Check_var
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="While";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"!(DeleteDeadVehicle getFSMvariable [""stop"",false])"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "End">*/
+                class End
+                {
+                        name = "End";
+                        itemno = 7;
+                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                        };
+                };
+                /*%FSM</STATE>*/
+        };
+        initState="init";
+        finalStates[] =
+        {
+                "End",
+        };
+};
+/*%FSM</COMPILE>*/

@@ -1,0 +1,7 @@
+#loop
+"_vehicle = _x
+_type  = ["car","ship","tank","air"] findIf {_vehicle isKindOf _x}
+? _test > -1 : deleteVehicle _vehicle
+" forEach vehicles
+~5
+? true : goto "LOOP"

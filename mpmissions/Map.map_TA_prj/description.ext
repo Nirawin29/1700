@@ -1,0 +1,44 @@
+#include "infiSTAR_AdminMenu.hpp"
+#include "dialog\MasterHandler.hpp"
+#include "Config\Config_Master.hpp"
+disableChannels[]={0,1,2,3,4};
+
+
+onLoadName = "1700";
+overviewTextLocked = "1700 vous presente:";
+author="";
+overviewText="1700";
+loadScreen="";
+onLoadIntro = "Missions de 1700";
+showGroupIndicator = 0;
+class Header
+{
+	gameType =  RPG; // Game type
+	minPlayers =  0; // minimum number of players the mission supports
+	maxPlayers = 60; // maximum number of players the mission supports
+};
+
+
+class CfgServer {
+    DatabaseName = "Database"; //Config name that'll be grep in the extdb-conf.ini. Default: [altislife]
+    DebugMode = 0; //Enable many server/hc debugging logs. Default: 0 (1 = Enabled / 0 = Disabled)
+    HeadlessSupport = 0; //Enable/Disable Headless client support. Default: 1 (1 = Enabled / 0 = Disabled)
+};
+
+class CfgFunctions {
+    #include "Functions.hpp"
+};
+
+class RscTitles
+{
+	#include "display\MasterHandler.hpp"
+};
+
+class CfgSounds {
+	sounds[] = {}; 
+	class chaine { 
+		name = "Chaines"; 
+		sound[] = { "Sounds\chaine.ogg",10,1,10}; 
+		titles[] = {}; 
+	}; 
+};
