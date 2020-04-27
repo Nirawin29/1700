@@ -5,3 +5,5 @@
 │                                                                   │
 │   Veuillez ne pas modifier ou supprimer ce bloc de commentaires   │
 └──────────────────────────────────────────────────────────────────*/
+
+player allowDamage false;
