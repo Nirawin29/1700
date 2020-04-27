@@ -7,7 +7,7 @@
 └──────────────────────────────────────────────────────────────────*/
 
 params [
-	["_NaviresArray",[],[[]]],
+	["_VehicleArray",[],[[]]],
 	["_MarkerName","",[""]]
 ];
 
@@ -24,9 +24,9 @@ _controlsGroup = (_DISPLAY displayCtrl 1752);
 
 (_DISPLAY displayCtrl 1751) ctrlSetStructuredText parseText format["<t align='center' valgin='middle' font='JackPirate' shadow='0' color='#000000' size='3'>Capitainerie<br />de<br />%1</t>","Kavala"];
 
-reverse _NaviresArray;
-_NaviresArray pushBack [-1,"DEBUG NE PAS TOUCHER","DEBUG"];
-reverse _NaviresArray;
+reverse _VehicleArray;
+_VehicleArray pushBack [-1,"DEBUG NE PAS TOUCHER","DEBUG"];
+reverse _VehicleArray;
 
 _DiagYPos = 0.145;
 _DiagXPos = 0.2966;
@@ -85,4 +85,4 @@ _ligheWeight = 0.23;
 
 	_DiagYPos=_DiagYPos+_lineheight+0.005;
 			
-} foreach _NaviresArray;
+} foreach _VehicleArray;

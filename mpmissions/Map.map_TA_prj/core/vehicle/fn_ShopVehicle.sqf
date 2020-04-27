@@ -13,6 +13,10 @@ private _ShopName = gettext(missionConfigFile >> "m700_Settings" >> "Cfg_ShopVeh
 _condition = gettext(missionConfigFile >> "m700_Settings" >> "Cfg_ShopVehicles" >> _shopClass >> "condition");
 _VehicleArray = getArray(missionConfigFile >> "m700_Settings" >> "Cfg_ShopVehicles" >> _shopClass >> "VehicleList");
 
+reverse _VehicleArray;
+_VehicleArray pushBack ["",0,"DEBUG NE PAS TOUCHER","",""];
+reverse _VehicleArray;
+
 if (_condition isEqualTo "") then {
 	_condition = "true";
 };
