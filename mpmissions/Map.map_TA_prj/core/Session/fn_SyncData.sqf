@@ -7,7 +7,11 @@
 └──────────────────────────────────────────────────────────────────*/
 
 
-[] spawn {
+_this spawn {
+	params [
+		["_showHint",true,[true]]
+	];
+
 	if !(missionNamespace getVariable ["AntiFloodSync",false]) then {
 		AntiFloodSync = true;
 		_ConfigLicensesList = "true" configClasses (missionconfigfile >> "m700_Settings" >> "Licenses");
@@ -21,12 +25,11 @@
 
 		_gear = getUnitLoadout player;
 
-		diag_log "sync data";
 		_HCID = getPlayerUId HC1;
 		if (_HCID isEqualTo "") then {
-			[player,(getPlayerUID player),Money_denier,Money_chiling,_LicensesArray,_gear,bagne] remoteExecCall ["SERVER_fnc_SyncAll", 2];
+			[player,(getPlayerUID player),_showHint,_LicensesArray,_gear,bagne] remoteExecCall ["SERVER_fnc_SyncAll", 2];
 		} else {
-			[player,(getPlayerUID player),Money_denier,Money_chiling,_LicensesArray,_gear,bagne] remoteExecCall ["HC_fnc_SyncAll", HC1];
+			[player,(getPlayerUID player),_showHint,_LicensesArray,_gear,bagne] remoteExecCall ["HC_fnc_SyncAll", HC1];
 		};
 		
 		_time = time;
