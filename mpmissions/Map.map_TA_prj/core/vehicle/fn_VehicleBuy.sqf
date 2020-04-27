@@ -11,7 +11,7 @@ _classname = _this # 1;
 _price = _this # 2;
 _markerName = _this # 3;
 _shopName = _this # 4;
-_pos = getMarkerPos _markerName;
+_pos = getMarkerPos _markerName; // pos du marker
 
 _nearVehicle = _pos nearEntities [["Ship"],5];
 if (_nearVehicle isEqualTo []) then {
