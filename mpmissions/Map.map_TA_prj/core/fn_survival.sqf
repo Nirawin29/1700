@@ -6,5 +6,5 @@
 │   Veuillez ne pas modifier ou supprimer ce bloc de commentaires   │
 └──────────────────────────────────────────────────────────────────*/
 
-
+systemChat "ok requestInfo";
 [] call m700_fnc_spawnmenu;
