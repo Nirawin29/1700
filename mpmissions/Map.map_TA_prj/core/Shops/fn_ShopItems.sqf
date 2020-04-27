@@ -6,4 +6,6 @@
 │   Veuillez ne pas modifier ou supprimer ce bloc de commentaires   │
 └──────────────────────────────────────────────────────────────────*/
 
-// vendeur item
+params [
+	["test"]
+];
