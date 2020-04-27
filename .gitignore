@@ -24,7 +24,7 @@
 /*.dll
 /@extDB3/logs
 /userconfig
-/*.log
+*.log
 armalog.cfg
 openssl_license.txt
 reboot.ps1
