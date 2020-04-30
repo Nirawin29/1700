@@ -1,3 +1,4 @@
+/@1700MAP
 /@1700
 /@infiSTAR_A3
 /addons
@@ -25,6 +26,8 @@
 /@extDB3/logs
 /userconfig
 /*.log
+*.log
+*.txt
 armalog.cfg
 armalog.log
 openssl_license.txt
