@@ -23,6 +23,11 @@ class m700 {
         class GuiMessage {};
     };
 
+    class Shops {
+        file = "core\Shops";
+        class Shopitems {};
+    };
+
     class vehicle {
         file = "core\vehicle";
         class VehicleBuy {};

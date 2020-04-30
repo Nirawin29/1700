@@ -3,3 +3,4 @@
 #include "ShopVehicle.hpp"
 #include "Garage.hpp"
 #include "Map.hpp"
+#include "ShopItems.hpp"

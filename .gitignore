@@ -24,8 +24,9 @@
 /*.dll
 /@extDB3/logs
 /userconfig
-*.log
+/*.log
 armalog.cfg
+armalog.log
 openssl_license.txt
 reboot.ps1
 steam_appid.txt
