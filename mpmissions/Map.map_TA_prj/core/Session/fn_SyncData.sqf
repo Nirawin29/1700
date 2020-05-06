@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*──────────────────────────────────────────────────────────────────┐
 │   Auteur  : Team 1700                                             │
 |   Serveur : 1700                                                  │
@@ -14,6 +15,10 @@ _this spawn {
 	];
 
 	if (!(missionNamespace getVariable ["AntiFloodSync",false]) || {_force isEqualTo true}) then {
+=======
+[] spawn {
+	if !(missionNamespace getVariable ["AntiFloodSync",false]) then {
+>>>>>>> Initial commit
 		AntiFloodSync = true;
 		_ConfigLicensesList = "true" configClasses (missionconfigfile >> "m700_Settings" >> "Licenses");
 		
@@ -26,6 +31,7 @@ _this spawn {
 
 		_gear = getUnitLoadout player;
 
+<<<<<<< HEAD
 		_HCID = getPlayerUId HC1;
 		if (_HCID isEqualTo "") then {
 			[player,(getPlayerUID player),_showHint,_LicensesArray,_gear,bagne] remoteExecCall ["SERVER_fnc_SyncAll", 2];
@@ -37,6 +43,13 @@ _this spawn {
 		if !(_force) then {
 			waitUntil {time > (_time+((getNumber(missionConfigFile >> "m700_settings" >> "AntiFloodSyncData"))*60))};
 		};
+=======
+		diag_log "sync data";
+		[player,(getPlayerUID player),Money_denier,Money_chiling,_LicensesArray,_gear,bagne] remoteExecCall ["SERVER_fnc_SyncAll",2];
+		_time = time;
+
+		waitUntil {time > (_time+((getNumber(missionConfigFile >> "m700_settings" >> "AntiFloodSyncData"))*60))};
+>>>>>>> Initial commit
 		AntiFloodSync = false;
 	};
 };

@@ -13,12 +13,17 @@ class m700 {
         class FirstJoin {};
         class RequestReceive {};
         class SyncData {};
+<<<<<<< HEAD
         class SpawnMenu {};
+=======
+        class redirectClientToServer {};
+>>>>>>> Initial commit
     };
 
     class Functions {
         file = "core\Functions";
         class print {};
+<<<<<<< HEAD
         class addAction {};
         class GuiMessage {};
     };
@@ -43,4 +48,12 @@ class m700 {
         class Map {};
         class ShopMap {};
     }
+=======
+    };
+
+    class Map {
+        file = "core\Map";
+        class map {};
+    };
+>>>>>>> Initial commit
 };

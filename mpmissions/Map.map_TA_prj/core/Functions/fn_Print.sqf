@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*──────────────────────────────────────────────────────────────────┐
 │   Auteur  : Team 1700                                             │
 |   Serveur : 1700                                                  │
@@ -12,23 +13,40 @@ _this spawn {
 		["_text","",[""]],
 		["_time",10,[0]],
 		["_size",2,[0]]
+=======
+_this spawn {
+	params [
+		["_text","",[""]],
+		["_time",10,[0]]
+>>>>>>> Initial commit
 	];
 
 	if (_text != "") then {
 		_display = (findDisplay 46);
 
+<<<<<<< HEAD
 		_displayID = (findDisplay 46) displayAddEventHandler ["keyDown","if ((_this select 1) isEqualTo 1) then {ctrlDelete ((findDisplay 46) displayCtrl 461701);ctrlDelete ((findDisplay 46) displayCtrl 461702);false;}"];
 
+=======
+>>>>>>> Initial commit
 		playSound "chaine";
 
 		_Box = _display ctrlCreate ["RscPicture",461701];
 		_Box ctrlSetBackgroundColor [0,0,0,0]; 
+<<<<<<< HEAD
 		_Box ctrlSetText "Textures\pancarte.paa";
+=======
+		_Box ctrlSetText "textures\pancarte.paa";
+>>>>>>> Initial commit
 
 
 		_structuredText = _display ctrlCreate ["m700_RscStructuredTextPrint",461702];
 		_structuredText ctrlSetBackgroundColor [0,0,0,0]; 
+<<<<<<< HEAD
 		_structuredText ctrlSetStructuredText parsetext format["<t align='center' valign='middle' size='%2' font='BlackPearl' color='#000000'>%1</t>",_text,_size];
+=======
+		_structuredText ctrlSetStructuredText parsetext _text;
+>>>>>>> Initial commit
 
 
 
@@ -58,8 +76,12 @@ _this spawn {
 		ctrlDelete _Box;
 		ctrlDelete _structuredText;
 		
+<<<<<<< HEAD
 		(findDisplay 46) displayRemoveEventHandler ["KeyDown",_displayID];
 	};
 
 	
+=======
+	};
+>>>>>>> Initial commit
 };

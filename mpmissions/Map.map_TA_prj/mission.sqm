@@ -8,6 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
+<<<<<<< HEAD
 		nextID=121;
 	};
 	class MarkerIDProvider
@@ -20,21 +21,43 @@ class EditorData
 		dir[]={-0.76417524,-0.54704177,0.34200376};
 		up[]={-0.49934995,0.83707827,0.22348428};
 		aside[]={0.40853888,5.2037649e-007,0.91284364};
+=======
+		nextID=71;
+	};
+	class MarkerIDProvider
+	{
+		nextID=1;
+	};
+	class Camera
+	{
+		pos[]={124.33334,48.855743,20595.039};
+		dir[]={0.69548541,-0.35856298,0.62269115};
+		up[]={0.26713905,0.93350482,0.23917817};
+		aside[]={0.66704577,-1.3795216e-007,-0.74502569};
+>>>>>>> Initial commit
 	};
 };
 binarizationWanted=0;
 addons[]=
 {
 	"A3_Characters_F",
+<<<<<<< HEAD
 	"A3_Ui_F",
 	"A3_Props_F_Exp_Commercial_Market",
 	"A3_Structures_F_Items_Documents"
+=======
+	"A3_Ui_F"
+>>>>>>> Initial commit
 };
 class AddonsMetaData
 {
 	class List
 	{
+<<<<<<< HEAD
 		items=4;
+=======
+		items=2;
+>>>>>>> Initial commit
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -49,6 +72,7 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+<<<<<<< HEAD
 		class Item2
 		{
 			className="A3_Props_F_Exp";
@@ -63,6 +87,8 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+=======
+>>>>>>> Initial commit
 	};
 };
 randomSeed=11630880;
@@ -157,7 +183,11 @@ class Mission
 	};
 	class Entities
 	{
+<<<<<<< HEAD
 		items=37;
+=======
+		items=23;
+>>>>>>> Initial commit
 		class Item0
 		{
 			dataType="Group";
@@ -1119,7 +1149,11 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
+<<<<<<< HEAD
 						position[]={805.367,0.60462153,21490.873};
+=======
+						position[]={805.36731,0.6046207,21490.873};
+>>>>>>> Initial commit
 					};
 					side="Civilian";
 					flags=7;
@@ -1638,6 +1672,7 @@ class Mission
 		};
 		class Item22
 		{
+<<<<<<< HEAD
 			dataType="Object";
 			class PositionInfo
 			{
@@ -2250,5 +2285,17 @@ class Mission
 			id=119;
 			atlOffset=0.00049233437;
 		};
+=======
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={926.04602,0.51947922,21316.996};
+			};
+			name="HC1";
+			isPlayable=1;
+			id=70;
+			type="HeadlessClient_F";
+		};
+>>>>>>> Initial commit
 	};
 };

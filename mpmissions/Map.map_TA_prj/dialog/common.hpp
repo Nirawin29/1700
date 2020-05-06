@@ -666,6 +666,7 @@ class m700_RscEdit {
     canModify = 1;
 };
 
+<<<<<<< HEAD
 
 class m700_RscEditInvisible
 {
@@ -694,6 +695,8 @@ class m700_RscEditInvisible
     tooltipColorShade[] = {0,0,0,0.65};
 };
 
+=======
+>>>>>>> Initial commit
 class m700_RscSlider {
     h = 0.025;
     color[] = {1, 1, 1, 0.8};
@@ -1264,4 +1267,15 @@ class m700_RscButtonInvisible : m700_RscButtonMenu {
     color2[] = {1, 1, 1, 0};
     colorText[] = {1, 1, 1, 0};
     colorDisabled[] = {1, 1, 1, 0};
+<<<<<<< HEAD
+=======
+};
+
+class m700_RscEditInvisible : m700_RscEdit {
+    colorBackground[] = {0, 0, 0, 0};
+    font = "PuristaLight";
+    color[] = {0,0,0,0};
+    shadow = 2;
+    colorText[] = {0.15,0.15,0.15,1};
+>>>>>>> Initial commit
 };
