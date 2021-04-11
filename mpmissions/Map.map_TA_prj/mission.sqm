@@ -8,7 +8,8 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=119;
+<<<<<<< HEAD
+		nextID=121;
 	};
 	class MarkerIDProvider
 	{
@@ -16,25 +17,47 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={17099.461,31.683336,4145.2539};
-		dir[]={-0.62091982,-0.59379148,0.51189709};
-		up[]={-0.45818666,0.80459899,0.37773934};
-		aside[]={0.63617021,3.2130629e-007,0.77166277};
+		pos[]={17061.131,11.392631,4175.0269};
+		dir[]={-0.76417524,-0.54704177,0.34200376};
+		up[]={-0.49934995,0.83707827,0.22348428};
+		aside[]={0.40853888,5.2037649e-007,0.91284364};
+=======
+		nextID=71;
+	};
+	class MarkerIDProvider
+	{
+		nextID=1;
+	};
+	class Camera
+	{
+		pos[]={124.33334,48.855743,20595.039};
+		dir[]={0.69548541,-0.35856298,0.62269115};
+		up[]={0.26713905,0.93350482,0.23917817};
+		aside[]={0.66704577,-1.3795216e-007,-0.74502569};
+>>>>>>> Initial commit
 	};
 };
 binarizationWanted=0;
 addons[]=
 {
 	"A3_Characters_F",
+<<<<<<< HEAD
 	"A3_Ui_F",
 	"A3_Props_F_Exp_Commercial_Market",
 	"A3_Structures_F_Items_Documents"
+=======
+	"A3_Ui_F"
+>>>>>>> Initial commit
 };
 class AddonsMetaData
 {
 	class List
 	{
+<<<<<<< HEAD
 		items=4;
+=======
+		items=2;
+>>>>>>> Initial commit
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -49,6 +72,7 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+<<<<<<< HEAD
 		class Item2
 		{
 			className="A3_Props_F_Exp";
@@ -63,6 +87,8 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+=======
+>>>>>>> Initial commit
 	};
 };
 randomSeed=11630880;
@@ -157,7 +183,11 @@ class Mission
 	};
 	class Entities
 	{
-		items=36;
+<<<<<<< HEAD
+		items=37;
+=======
+		items=23;
+>>>>>>> Initial commit
 		class Item0
 		{
 			dataType="Group";
@@ -1119,7 +1149,11 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
+<<<<<<< HEAD
 						position[]={805.367,0.60462153,21490.873};
+=======
+						position[]={805.36731,0.6046207,21490.873};
+>>>>>>> Initial commit
 					};
 					side="Civilian";
 					flags=7;
@@ -1638,6 +1672,7 @@ class Mission
 		};
 		class Item22
 		{
+<<<<<<< HEAD
 			dataType="Object";
 			class PositionInfo
 			{
@@ -2058,7 +2093,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={17044.213,2.5541658,4175.4756};
-				angles[]={-0,4.0146413,0};
+				angles[]={0,4.0146413,0};
 			};
 			side="Empty";
 			flags=4;
@@ -2136,5 +2171,131 @@ class Mission
 			type="Land_File1_F";
 			atlOffset=0.93225741;
 		};
+		class Item36
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={17045.633,2.080245,4180.1387};
+						angles[]={0,1.7508097,0};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="call{this addaction [""<t font='BlackChancery' size='1.5' color='#b88b39'>Marchand"",{[] call m700_fnc_Shopitems}]}";
+						disableSimulation=1;
+						ignoreByDynSimulGrid=1;
+					};
+					id=120;
+					type="C_man_polo_5_F";
+					atlOffset=0.00049233437;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male03GRE";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="enableStamina";
+							expression="_this enablestamina _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=119;
+			atlOffset=0.00049233437;
+		};
+=======
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={926.04602,0.51947922,21316.996};
+			};
+			name="HC1";
+			isPlayable=1;
+			id=70;
+			type="HeadlessClient_F";
+		};
+>>>>>>> Initial commit
 	};
 };

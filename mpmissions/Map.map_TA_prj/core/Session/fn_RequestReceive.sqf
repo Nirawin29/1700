@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*──────────────────────────────────────────────────────────────────┐
 │   Auteur  : Team 1700                                             │
 |   Serveur : 1700                                                  │
@@ -6,6 +7,8 @@
 │   Veuillez ne pas modifier ou supprimer ce bloc de commentaires   │
 └──────────────────────────────────────────────────────────────────*/
 
+=======
+>>>>>>> Initial commit
 params [
 	["_name","",[""]],
 	["_pid","",[""]],
@@ -13,7 +16,10 @@ params [
 	["_money_chiling",0,[0]],
 	["_cdio_level",0,[0]],
 	["_licenses",[],[[]]],
+<<<<<<< HEAD
 	["_cartes",[],[[]]],
+=======
+>>>>>>> Initial commit
 	["_gear",[],[[]]],
 	["_bagne",0,[0]]
 ];
@@ -28,6 +34,7 @@ CDIO_Level = _cdio_level;
 	missionNamespace setVariable[_name,_value];
 } forEach _licenses;
 
+<<<<<<< HEAD
 m700_carte_2 = true;
 {
 	_name = _x # 0;
@@ -37,6 +44,8 @@ m700_carte_2 = true;
 	};
 } forEach _cartes;
 
+=======
+>>>>>>> Initial commit
 bagne = _bagne;
 
 player setUnitLoadout _gear;

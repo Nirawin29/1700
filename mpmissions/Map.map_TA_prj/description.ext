@@ -1,4 +1,8 @@
+
+<<<<<<< HEAD
+=======
 #include "infiSTAR_AdminMenu.hpp"
+>>>>>>> Initial commit
 #include "dialog\MasterHandler.hpp"
 #include "Config\Config_Master.hpp"
 disableChannels[]={0,1,2,3,4};

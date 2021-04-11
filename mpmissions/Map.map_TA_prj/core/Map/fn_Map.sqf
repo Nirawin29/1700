@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*──────────────────────────────────────────────────────────────────┐
 │   Auteur  : Team 1700                                             │
 |   Serveur : 1700                                                  │
@@ -12,12 +13,26 @@ if ((isnull (findDisplay 1702)) && {!visibleMap}) then {
 	waitUntil {!(isnull (findDisplay 1702))};
 	disableSerialization;
 
+=======
+if ((isnull (findDisplay 1702)) && {!visibleMap}) then { 
+	createdialog "m700_map";  
+
+	waitUntil {!(isnull (findDisplay 1702))};
+	disableSerialization;
+
+	if ((missionNamespace getVariable["m700_adminlevel",0]) > 0) then {
+		ctrlShow[1701,true];
+		ctrlShow[1751,true];
+	};
+
+>>>>>>> Initial commit
 	for "_i" from 1 to 31 do {
 		if (missionNamespace getvariable[format["m700_carte_%1",_i],false]) then {
 			_zoneCarte = (findDisplay 1702) ctrlCreate ["RscPicture",(1760+_i)];
 			_zoneCarte ctrlSetPosition [0.0410937 * safezoneW + safezoneX,0.071 * safezoneH + safezoneY,0.922969 * safezoneW,0.847 * safezoneH];
 			_zoneCarte ctrlCommit 0;
 			_zoneCarte ctrlSetBackgroundColor [0,0,0,0]; 
+<<<<<<< HEAD
 			_zoneCarte ctrlSetText format["Textures\Map\Zones\zone %1.paa",_i];
 		};
 	};
@@ -171,3 +186,9 @@ if ((isnull (findDisplay 1702)) && {!visibleMap}) then {
 
 
 
+=======
+			_zoneCarte ctrlSetText format["Textures\Map\zone %1.paa",_i];
+		};
+	};
+}; 
+>>>>>>> Initial commit

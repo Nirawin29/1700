@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*──────────────────────────────────────────────────────────────────┐
 │   Auteur  : Team 1700                                             │
 |   Serveur : 1700                                                  │
@@ -6,6 +7,8 @@
 │   Veuillez ne pas modifier ou supprimer ce bloc de commentaires   │
 └──────────────────────────────────────────────────────────────────*/
 
+=======
+>>>>>>> Initial commit
 money_denier = 0;
 money_chiling = 0;
 CDIO_Level = 0;
